@@ -8,7 +8,7 @@ export default async function Home() {
     return (
       <main>
           <h1 className="text-lg py-2 m-4">These movies are the shit!</h1>
-          <h1 className="text-lg py-2 m-4">`{process.env.API_KEY}`</h1>
+            <div className="bg-scroll bg-[url('/dbg.jpg')] h-full w-full bg-no-repeat bg-cover grid gap-16 grid-cols-fluid"  >
             {res.results.map((movie) => (
                 <Movie
                     key={movie.id}
@@ -17,7 +17,8 @@ export default async function Home() {
                     poster_path={movie.poster_path}
                     release_date={movie.release_date}
                     />
-          ))}
+            ))}
+            </div>
       </main>
   )
 }
