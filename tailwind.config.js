@@ -9,6 +9,11 @@ module.exports = {
         "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    backgroundColor: theme => ({
+      ...theme('colors'),
+      'primary': '#0d646b',
+      'secondary': '#16383a',
+    }),
     extend: {
     gridTemplateColumns: {
         fluid: "repeat(auto-fit,minmax(15rem,1fr))",
